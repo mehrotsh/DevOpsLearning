@@ -21,3 +21,12 @@ git remote add origin git@github.com:mehrotsh/terraformstuff.git
 git pull --rebase origin master
 
 git push origin master
+
+**5) remove from remote but not from local**
+
+git rm -r --cached hello removeme
+
+git commit -m "remove only remote"
+
+git push origin master
+
