@@ -46,4 +46,32 @@ git push origin master
 Take changes from working copy to remote repo
 
 
+ **8) git stash**
+ 
+ It is used for putting changes from working directory to a stash box, instead of staging (git add) them for commit.
+ 
+ ![](images/git_stash.JPG)
+ 
+  **git stash save "1"**
+  
+  **git stash save "2"**
+  
+  stashes the change made on file in working directory
+  
+  **git stash list**
+  
+  list all the changes stashed
+  
+  **git stash apply stash@{1}
+  
+  apply all the stash to local working directory (it does not delete it from stash  *(you can still find it in git stash list)*  also you cannot apply another stash until you add the change made by previous stash apply command or you use git reset -hard to roll it back to previous state)
+  **git stash pop**
+  
+  apply then removes last saved stash
+  
+  **git stash clear**
+  
+  clears the stash list
+  
+  
  
