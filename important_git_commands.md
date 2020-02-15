@@ -62,7 +62,7 @@ Take changes from working copy to remote repo
   
   list all the changes stashed
   
-  **git stash apply stash@{1}
+  **git stash apply stash@{1}**
   
   apply all the stash to local working directory (it does not delete it from stash  *(you can still find it in git stash list)*  also you cannot apply another stash until you add the change made by previous stash apply command or you use git reset -hard to roll it back to previous state)
   **git stash pop**
@@ -73,5 +73,13 @@ Take changes from working copy to remote repo
   
   clears the stash list
   
+  **9)git remote**
   
- 
+  Lets you create , view, and delete connections to other repositories.
+   **git remote -v**
+   
+   List the remote connections, including the URL of each connection.
+  
+   **git remote add** 
+   
+   **Example:** git remote add john http://dev.example.com/john.git
