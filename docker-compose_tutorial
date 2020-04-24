@@ -1,0 +1,32 @@
+Docker Compose is the toolkit provided by Docker to build, ship and run "multi-container" applicatoins
+Comes with both command line and compose file where you can define your stack
+
+docker-compose up -d >> creates containers mentioned in docker-compose file
+
+Limitation of docker-compose is you can only run docker-compose on single machine, this means you can run your stack only on one machine, you cannot run it on a computed cluster, you cannot distribute your containers on cluster.
+For cluster you need docker swarm.
+
+docker-compose build  >> build the docker image 
+
+If you haven't mentioned the network name in docker-compose.yml file, your "project_directory_name-default" will be the default network name
+docker network ls >> get the list of networks
+
+docker network inspect network_name >> gives the details of all the services connected to the network
+
+docker-compose stop >> stops all the services
+
+Desired State:
+
+Docker-compose file is a desired state of your application.
+docker compose checks the actual state of application and compare it with the desired state in docker-compose.yml file and if two are different it'll apply the delta.
+
+
+docker-compose ip -d --scale app=3 >> this will deplot 3 containers for app 3
+
+docker-compose push >> Pushes images for services to their respective repo/dockerhub
+
+docker-compose pull >>  Pulls an image associated with a service defined in a docker-compose.yml
+
+docker-compose.overide.yml >> when this file is proesent in project directory, docker-compose fill first run docker-compose.yml file and then the changes applied in docker-compose.override.yml file will apply(or add) over the docker-compose.yml file.
+In production project scenarios you will put your production configuration in docker-compose.yml and your dev in docker-compose.override.yml
+
